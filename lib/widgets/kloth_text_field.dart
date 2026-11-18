@@ -3,52 +3,49 @@ import 'package:material_ui/material_ui.dart';
 class KlothTextField extends StatelessWidget {
   const KlothTextField({
     super.key,
-    required this.label,
-    this.hint,
+    required this.labelText,
+    this.hintText,
     this.obscureText = false,
-    this.onChanged,
     this.keyboardType,
   });
 
-  final String label;
-  final String? hint;
+  final String labelText;
+  final String? hintText;
   final bool obscureText;
-  final ValueChanged<String>? onChanged;
   final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      onChanged: onChanged,
       obscureText: obscureText,
       keyboardType: keyboardType,
       decoration: buildInputDecoration(
-        label: label,
-        hint: hint,
+        labelText: labelText,
+        hintText: hintText,
       ),
     );
   }
 }
 
 InputDecoration buildInputDecoration({
-  required String label,
-  String? hint,
+  required String labelText,
+  String? hintText,
 }) {
   return InputDecoration(
-    labelText: label,
-    hintText: hint,
-    filled: true,
-    fillColor: Color(0xFFF7F3F2),
+    labelText: labelText,
+    hintText: hintText,
     labelStyle: TextStyle(
       color: Color(0xFF454743),
-      fontSize: 14,
+      fontSize: 14.0,
     ),
+    filled: true,
+    fillColor: Color(0xFFF7F3F2),
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(12.0),
       borderSide: BorderSide.none,
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(12.0),
       borderSide: BorderSide(color: Color(0xFF020202), width: 1.5),
     ),
   );

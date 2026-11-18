@@ -100,7 +100,10 @@ class ProfileScreen extends StatelessWidget {
             SizedBox(height: 16),
             Divider(color: Color(0xFFC6C7C1)),
             SizedBox(height: 16),
-            KlothButton(buttonName: 'Editar perfil'),
+            KlothButton(
+              buttonName: 'Editar perfil',
+              buttonColor: Color(0xFF020202),
+            ),
             SizedBox(height: 12),
             OutlinedButton(
               onPressed: () {},

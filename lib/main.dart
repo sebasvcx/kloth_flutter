@@ -3,7 +3,7 @@ import 'package:material_ui/material_ui.dart';
 import 'screens/screen_picker.dart';
 
 void main() {
-  runApp(MainApp());
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {

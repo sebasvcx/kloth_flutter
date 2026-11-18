@@ -1,32 +1,31 @@
 import 'package:material_ui/material_ui.dart';
 
 class KlothButton extends StatelessWidget {
+  final String buttonName;
+  final Color buttonColor;
+
   const KlothButton({
     super.key,
     required this.buttonName,
-    this.onPressed,
+    required this.buttonColor,
   });
-
-  final String buttonName;
-  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: 50.0,
       width: double.infinity,
-      height: 52,
-      child: ElevatedButton(
-        onPressed: onPressed ?? () {},
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Color(0xFF020202),
-          foregroundColor: Colors.white,
-          elevation: 0,
-          shape: StadiumBorder(),
+      child: OutlinedButton(
+        onPressed: () {},
+        style: OutlinedButton.styleFrom(
+          backgroundColor: buttonColor,
+          side: BorderSide(color: buttonColor),
         ),
         child: Text(
           buttonName,
           style: TextStyle(
-            fontSize: 16,
+            color: Colors.white,
+            fontSize: 16.0,
             fontWeight: FontWeight.w600,
           ),
         ),

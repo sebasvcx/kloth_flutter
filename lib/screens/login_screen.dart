@@ -13,24 +13,24 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: Color(0xFFFCF8F7),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.all(30.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Spacer(),
               KlothLogoHeader(),
-              SizedBox(height: 40),
+              SizedBox(height: 40.0),
               KlothTextField(
-                label: 'Correo electrónico',
-                hint: 'correo@gmail.com',
+                labelText: 'Correo electrónico',
+                hintText: 'correo@gmail.com',
                 keyboardType: TextInputType.emailAddress,
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 16.0),
               KlothTextField(
-                label: 'Contraseña',
+                labelText: 'Contraseña',
                 obscureText: true,
               ),
-              SizedBox(height: 8),
+              SizedBox(height: 8.0),
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
@@ -41,11 +41,14 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 24),
-              KlothButton(buttonName: 'INGRESAR'),
-              SizedBox(height: 24),
+              SizedBox(height: 24.0),
+              KlothButton(
+                buttonName: 'INGRESAR',
+                buttonColor: Color(0xFF020202),
+              ),
+              SizedBox(height: 24.0),
               OrDivider(),
-              SizedBox(height: 24),
+              SizedBox(height: 24.0),
               AuthRedirectText(
                 text: '¿No tienes cuenta? ',
                 linkText: 'Regístrate',
@@ -68,7 +71,7 @@ class OrDivider extends StatelessWidget {
       children: [
         Expanded(child: Divider(color: Color(0xFFC6C7C1))),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 12),
+          padding: EdgeInsets.symmetric(horizontal: 12.0),
           child: Text(
             'o',
             style: TextStyle(color: Color(0xFF454743)),
